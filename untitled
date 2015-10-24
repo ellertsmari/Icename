@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<link type="text/css" rel="MyIcelandicName" href="MyIcelandicName.css"/>
+		<title>Icelandic name</title>
+	</head>
+	<body>
+		<div id="header"><img src="vuorikukka.jpg"</div>
+		<div id="keski"
+		<h2>What is your Icelandic name?</h2>
+		<p>Have you ever thought what would be your Viking name. Soon you'll find out!</p>
+		<p>Are you:</p>
+		<ul>
+			<li>Female</li>
+			<li>Male</li>
+		</ul>
+		<p>Type your first name</p>
+		<div class="form"</div>
+		</div>
+	</body>
+		</html>
