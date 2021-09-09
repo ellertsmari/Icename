@@ -15,6 +15,7 @@ function GetURLParameter(sParam)
         }
     }
 };
+/*
 $.ajax({
   url: "http://apis.is/names/males/",
   context: document.body
@@ -23,6 +24,7 @@ $.ajax({
 	  url: "http://apis.is/names/females/",
 	  context: document.body
 	}).done(function(women) {
+    */
       var firstnames = unescape(GetURLParameter("first")).split("+");
       console.log("nofnin eru:");
       console.log(firstnames);
@@ -38,10 +40,10 @@ $.ajax({
       var results = results1 + " " + getLastName(results2, GetURLParameter("Gender") === "Male");
       $("#results").html(results);
 
-
+/*
 	});
 
-});
+});*/
 var checkName=function(name, names){
   /*testing remove before production:
   console.log("nafnid er: "+ GetURLParameter("first"));
