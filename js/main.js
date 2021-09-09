@@ -15,35 +15,7 @@ function GetURLParameter(sParam)
         }
     }
 };
-/*
-$.ajax({
-  url: "http://apis.is/names/males/",
-  context: document.body
-}).done(function(men) {
-	$.ajax({
-	  url: "http://apis.is/names/females/",
-	  context: document.body
-	}).done(function(women) {
-    */
-      var firstnames = unescape(GetURLParameter("first")).split("+");
-      console.log("nofnin eru:");
-      console.log(firstnames);
-      var nameList = (GetURLParameter("Gender") === "Male") ? men.results : women.results;
-      var fathersName = GetURLParameter("fathers")
-      console.log(fathersName);
-      var results1 = "";
-      for (var i = 0; i < firstnames.length; i++) {
-        results1 += checkName(firstnames[i], nameList) + " ";
-      }
-      var results2 = checkName(fathersName, men.results);
-      //TODO: need to make this work for mothers name too, make it more fluent and transparent in the code
-      var results = results1 + " " + getLastName(results2, GetURLParameter("Gender") === "Male");
-      $("#results").html(results);
 
-/*
-	});
-
-});*/
 var checkName=function(name, names){
   /*testing remove before production:
   console.log("nafnid er: "+ GetURLParameter("first"));
@@ -122,3 +94,17 @@ var checkName=function(name, names){
   console.log($("#results"))
   return results;
 }
+var firstnames = unescape(GetURLParameter("first")).split("+");
+console.log("nofnin eru:");
+console.log(firstnames);
+var nameList = (GetURLParameter("Gender") === "Male") ? men.results : women.results;
+var fathersName = GetURLParameter("fathers")
+console.log(fathersName);
+var results1 = "";
+for (var i = 0; i < firstnames.length; i++) {
+  results1 += checkName(firstnames[i], nameList) + " ";
+}
+var results2 = checkName(fathersName, men.results);
+//TODO: need to make this work for mothers name too, make it more fluent and transparent in the code
+var results = results1 + " " + getLastName(results2, GetURLParameter("Gender") === "Male");
+$("#results").html(results);
